@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Montserrat Regular";
+  src: url("./assets/fonts/Montserrat_Regular.ttf") format("woff2"),
+    url("./assets/fonts/Montserrat_Regular.ttf") format("woff"),
+    url("./assets/fonts/Montserrat_Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "oswald Regular";
+  src: url("./assets/fonts/oswald_regular.ttf") format("woff2"),
+    url("./assets/fonts/oswald_regular.ttf") format("woff"),
+    url("./assets/fonts/oswald_regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Raleway Regular";
+  src: url("./assets/fonts/Raleway_Regular.ttf") format("woff2"),
+    url("./assets/fonts/Raleway_Regular.ttf") format("woff"),
+    url("./assets/fonts/Raleway_Regular.ttf") format("truetype");
+}
