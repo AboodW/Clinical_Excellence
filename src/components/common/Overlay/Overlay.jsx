@@ -1,7 +1,7 @@
 import "./Overlay.css";
 
 const Overlay = () => {
-  return <div>Overlay</div>;
+  return <div className="over-lay"></div>;
 };
 
 export default Overlay;

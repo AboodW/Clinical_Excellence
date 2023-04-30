@@ -1,0 +1,110 @@
+header {
+  position: relative;
+  height: 45.563rem;
+  background-image: url("../../assets/img/hero-2-bg-shape-cover-dark.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.headerLayout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headerBody {
+  height: 504px;
+  z-index: 1;
+}
+
+.headerBigTitle {
+  font-family: "oswald Regular", sans-serif;
+  font-weight: 700;
+  font-size: 4.375rem;
+  line-height: 5rem;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+}
+
+.headerParagraph {
+  font-family: "Raleway Regular", sans-serif;
+  width: 23.5rem;
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+}
+
+.headerButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 22.6875rem;
+}
+.getQuoteButton {
+  padding: 15px 40px;
+  gap: 10px;
+  border: none;
+  color: #fff;
+  background: #23a6f0;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.learnMoreButton {
+  padding: 15px 40px;
+  gap: 10px;
+  background: none;
+  color: #fff;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+/*hover*/
+.getQuoteButton:hover {
+  background: #039bf3;
+}
+.learnMoreButton:hover {
+  background: #fff;
+  color: #23a6f0;
+}
+
+/*responsive*/
+@media screen and (max-width: 768px) {
+  header {
+    height: 100%;
+  }
+  .headerLayout {
+    padding: 0 1.5rem;
+  }
+  .headerBody {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .headerBigTitle {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    text-align: center;
+  }
+  .headerParagraph {
+    width: 100%;
+    text-align: center;
+  }
+  .headerButtons {
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+  .getQuoteButton {
+    width: 100%;
+  }
+  .learnMoreButton {
+    width: 100%;
+  }
+}

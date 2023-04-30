@@ -1,0 +1,31 @@
+.noMatchCont {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #d929f0, #2020c2);
+}
+
+.mainDev {
+  color: #fff;
+}
+
+.noMatchLink {
+  background: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 1rem;
+  text-decoration: none;
+  color: #000;
+}
+
+.noMatchLink:hover {
+  color: #d929f0;
+  border: 2px solid #d929f0;
+  background: #f3f3f3;
+  font-size: 1.6rem;
+}

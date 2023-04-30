@@ -1,6 +1,7 @@
 import "./Research.css";
+import { researchTexts } from "../../constants/research";
 const Research = () => {
-  return <div>Research</div>;
+  return <div>{researchTexts.semiTitle}</div>;
 };
 
 export default Research;

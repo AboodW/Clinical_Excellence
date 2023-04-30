@@ -1,6 +1,8 @@
+import headerLogo from "../assets/img/logo.svg";
+
 export const navbarTexts = [
   {
-    logo: "img path",
+    logo: headerLogo,
   },
   {
     Home: "Home",
@@ -11,7 +13,7 @@ export const navbarTexts = [
     Pages: "Pages",
   },
   {
-    login: `Login / Register`,
+    login: ` Login / Register`,
     serachIcon: "",
     cartIcon: "",
     FavoriteIcon: "",

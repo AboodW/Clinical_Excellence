@@ -1,0 +1,9 @@
+.over-lay {
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 14px;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.25);
+}

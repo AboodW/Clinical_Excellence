@@ -1,0 +1,9 @@
+.aboutMainCont {
+  font-family: "Montserrat Regular", sans-serif;
+}
+
+@media screen and (width >= 992px) {
+  .aboutMainCont {
+    height: 570px;
+  }
+}
