@@ -1,0 +1,80 @@
+.LatestNewsCardImgContainer img {
+}
+
+.LatestMenu {
+  width: 159px;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.latestNewsHeader {
+  margin-top: 10px;
+}
+
+.latestNewsCardText {
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.2px;
+  color: #737373;
+  width: 182px;
+  font-family: "Montserrat Regular", sans-serif;
+}
+
+.LatestMenu Button {
+  background-color: #fff;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+  color: #737373;
+}
+.LatestNewsCCLinks {
+  display: flex;
+  margin-top: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0px;
+  width: 193px;
+}
+.LatestNewsCCLinks button {
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0.2px;
+  color: #737373;
+}
+
+.chart svg {
+  width: 16px;
+  height: 16px;
+  color: #23856d;
+}
+
+.clock svg {
+  width: 16px;
+  height: 16px;
+  color: #23a6f0;
+}
+
+.latestNewsButton {
+  width: fit-content;
+  background: none;
+  border: none;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.2px;
+  color: #737373;
+}
+
+.latestNewsButton span svg {
+  width: 16px;
+  height: 20px;
+  color: #23a6f0;
+}

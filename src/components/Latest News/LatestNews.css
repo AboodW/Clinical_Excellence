@@ -1,0 +1,29 @@
+/* .latestNewsSemiTitle {
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.2px;
+  color: #23a6f0;
+  font-family: "Montserrat Regular", sans-serif;
+} */
+
+.latestNewsCards {
+  justify-content: space-between;
+}
+
+.latestNewsTitle {
+  font-weight: 700;
+  font-size: 3.0625rem;
+  line-height: 3.625rem;
+  letter-spacing: 0.2px;
+  color: #252b42;
+  font-family: "oswald Regular", sans-serif;
+}
+
+.latestNewsText {
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  letter-spacing: 0.2px;
+  color: #737373;
+}

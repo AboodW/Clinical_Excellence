@@ -1,72 +1,136 @@
-// import "./Navbar.css";
-// // import { Link } from "react-router-dom";
+/* eslint-disable no-unused-vars */
+import "./Navbar.css";
+// import { Link } from "react-router-dom";
+import { navbarTexts } from "../../../constants/header";
+import { BiMenuAltRight } from "react-icons/bi";
+import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 
-// import Container from "react-bootstrap/Container";
-// import Nav from "react-bootstrap/Nav";
-// import Navbar from "react-bootstrap/Navbar";
-// import NavDropdown from "react-bootstrap/NavDropdown";
-// import { navbarTexts } from "../../../constants/header";
-// import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
-// import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-// import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-// import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+const Navbar = () => {
+  return (
+    <div className="navBanner">
+      <nav className="navbar navbar-expand-lg p-0 flex-nowrap">
+        <div className="container p-3">
+          <a className="navbar-brand" href="/">
+            <img src={navbarTexts[0].logo} alt="logo img" />
+          </a>
+          <div className="allNavsLinks d-flex ">
+            <button
+              className="navbar-toggler border-0 my-auto"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="spanMenu">
+                <BiMenuAltRight />
+              </span>
+            </button>
 
-// const NavBar = () => {
-//   return (
-//     <Navbar collapseOnSelect expand="lg" className="p-0">
-//       <Container fluid className="navBigCont d-flex">
-//         <Navbar.Brand href="/">
-//           <img src={navbarTexts[0]?.logo} />
-//         </Navbar.Brand>
-//         <Container className="navsButtons m-0 d-flex">
-//           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-//           <Navbar.Collapse id="responsive-navbar-nav">
-//             <Nav className="me-auto firstNavLinks">
-//               <Nav.Link href="/">
-//                 {/* <Link to="/"> */}
-//                 {navbarTexts[1]?.Home}
-//                 {/* </Link> */}
-//               </Nav.Link>
-//               <NavDropdown
-//                 title={navbarTexts[1]?.Shop}
-//                 id="navbarScrollingDropdown"
-//                 href="*"
-//               >
-//                 <NavDropdown.Item href="*">Drugs</NavDropdown.Item>
-//                 <NavDropdown.Item href="*">Medical Products</NavDropdown.Item>
-//                 <NavDropdown.Divider />
-//                 <NavDropdown.Item href="*">Get Help</NavDropdown.Item>
-//               </NavDropdown>
-//               <Nav.Link href="*">{navbarTexts[1]?.About}</Nav.Link>
-//               <Nav.Link href="*">{navbarTexts[1]?.Blog}</Nav.Link>
-//               <Nav.Link href="*">{navbarTexts[1]?.Contact}</Nav.Link>
-//               <NavDropdown
-//                 title={navbarTexts[1]?.Pages}
-//                 id="navbarScrollingDropdown"
-//               >
-//                 <NavDropdown.Item href="/dashboard">DashBoard</NavDropdown.Item>
-//               </NavDropdown>
-//             </Nav>
-//           </Navbar.Collapse>
-//           <Nav className="navlogin">
-//             <Nav.Link className="p-3 text1" href="*">
-//               <PersonOutlinedIcon />
-//               <span>{navbarTexts[2]?.login}</span>
-//             </Nav.Link>
-//             <Nav.Link className="p-3" eventKey={2} href="*">
-//               <SearchOutlinedIcon />
-//             </Nav.Link>
-//             <Nav.Link className="p-3" href="*">
-//               <ShoppingCartOutlinedIcon />
-//             </Nav.Link>
-//             <Nav.Link className="p-3" href="*">
-//               <FavoriteBorderOutlinedIcon />
-//             </Nav.Link>
-//           </Nav>
-//         </Container>
-//       </Container>
-//     </Navbar>
-//   );
-// };
+            <div className="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul className="navbar-nav">
+                <li className="nav-item">
+                  <a className="nav-link" aria-current="page" href="/">
+                    Home
+                  </a>
+                </li>
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link dropdown-toggle"
+                    href="*"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Shop
+                  </a>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <a className="dropdown-item" href="*">
+                        Drugs
+                      </a>
+                    </li>
+                    <li>
+                      <a className="dropdown-item" href="*">
+                        Medical Products
+                      </a>
+                    </li>
+                    <li>
+                      <a className="dropdown-item" href="*">
+                        Get Help
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="*">
+                    About
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="*">
+                    Blog
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="*">
+                    Contact
+                  </a>
+                </li>
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link dropdown-toggle"
+                    href="*"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    pages
+                  </a>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <a className="dropdown-item" href="*">
+                        Dashboard
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div className="loginBanner">
+              <ul className="navbar-nav flex-row ">
+                <li className="nav-item ">
+                  <a to="*" className="nav-link login">
+                    <PersonOutlinedIcon />
+                    {navbarTexts[2]?.login}
+                  </a>
+                </li>
+                <li className="nav-item ">
+                  <a to="*" className="nav-link">
+                    <SearchOutlinedIcon />
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a to="*" className="nav-link">
+                    <ShoppingCartOutlinedIcon />
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a to="*" className="nav-link favi">
+                    <FavoriteBorderOutlinedIcon />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  );
+};
 
-// export default NavBar;
+export default Navbar;

@@ -1,19 +1,12 @@
-nav {
-  width: 90%;
+.navBanner {
   font-family: "Montserrat Regular", sans-serif;
 }
 
-div.container-fluid {
-  padding: 16px;
+.allNavsLinks {
+  width: 85%;
 }
-
-/* button.navbar-toggler.collapsed {
-  width: fit-content;
-  height: fit-content;
-} */
-
-div.firstNavLinks {
-  margin-left: 5rem;
+.loginBanner {
+  margin-right: 7rem;
 }
 
 .nav-link {
@@ -21,45 +14,20 @@ div.firstNavLinks {
   font-family: "Montserrat Regular", sans-serif;
 }
 
-div.navlogin {
-  margin-right: 7rem;
-}
-div.navlogin .text1 {
-  font-weight: 700;
-}
-
 @media screen and (width < 1253px) {
-  div.navlogin .text1 {
-    display: none;
-  }
-
-  div.firstNavLinks {
-    margin-top: 1rem;
-    display: flex;
-    align-items: start;
-  }
-  div.navlogin {
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: row;
-  }
 }
 @media screen and (width < 992px) {
-  div.navlogin {
-    margin: 0;
+  .navBanner {
+    background: #252b42;
   }
-  div.navsButtons {
+  .allNavsLinks {
     flex-direction: row-reverse;
   }
-  button.navbar-toggler.collapsed {
+  .login,
+  .favi {
+    display: none;
   }
 }
 
 @media screen and (width < 768px) {
-  div.navsButtons {
-    flex-direction: column;
-  }
-  div.firstNavLinks {
-    margin-left: 0;
-  }
 }

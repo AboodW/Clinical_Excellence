@@ -1,0 +1,32 @@
+.footerContainer {
+  background: #2a7cc7;
+  color: #fff;
+}
+
+.rowBanner {
+  padding: 80px 0;
+}
+.footerHeaderOption {
+  font-weight: 500;
+  font-size: 1.625rem;
+  line-height: 1.875rem;
+  letter-spacing: 0.1px;
+  color: #ffffff;
+  font-family: "oswald Regular", sans-serif;
+  margin-bottom: 25px;
+}
+.socialIcons {
+  width: 112px;
+}
+.footerOPText {
+  width: 242px;
+}
+
+.footerOption {
+  font-weight: 300;
+  font-size: 1.0625rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.2px;
+  color: #8ec2f2;
+  font-family: "Raleway Regular", sans-serif;
+}

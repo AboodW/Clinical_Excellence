@@ -1,0 +1,109 @@
+.reviewsContainer {
+  background: #eef9ff;
+  height: 394px;
+}
+
+.ratingContainer {
+  padding: 30px 35px;
+  width: 416px;
+}
+
+.stars {
+}
+
+.reviewText {
+  margin-top: 20px;
+  text-align: center;
+  font-family: "Montserrat Regular", sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #737373;
+}
+
+.authorBanner {
+  margin-top: 20px;
+}
+
+.authorInfo {
+}
+
+.authorName {
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #23a6f0;
+  font-family: "Montserrat Regular", sans-serif;
+}
+
+.authorJob {
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #252b42;
+  font-family: "Montserrat Regular", sans-serif;
+}
+
+.verticalDivider {
+  width: 0;
+  height: 298px;
+  border: 2px solid #ececec;
+  text-align: center;
+  /* transform: rotate(90deg); */
+}
+
+.subscribeContainer {
+  padding-left: 69.5px;
+  padding-right: 69.5px;
+}
+
+.subscribeText1 {
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #8ec2f2;
+  font-family: "Raleway Regular", sans-serif;
+}
+
+.subscribeDiscount {
+  margin-top: 25px;
+  font-weight: 500;
+  font-size: 1.625rem;
+  line-height: 1.875rem;
+  text-align: center;
+  letter-spacing: 0.1px;
+  color: #252b42;
+  font-family: "oswald Regular", sans-serif;
+}
+
+.subscribeInput {
+  margin-top: 25px;
+  width: 355px;
+  height: 58px;
+}
+.subscribeInput input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.subscribeButton {
+  background: #23a6f0;
+  border: 1px solid #e6e6e6;
+  border-radius: 0px 5px 5px 0px;
+  color: #fff;
+}
+
+.subscribeText2 {
+  margin-top: 25px;
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #737373;
+}

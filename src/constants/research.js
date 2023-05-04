@@ -11,3 +11,4 @@ export const researchTexts = {
   fillButton: "Shop Now",
   outlineButton: "Learn More",
 };
+//1

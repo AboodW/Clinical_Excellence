@@ -1,0 +1,91 @@
+.researchTextBody {
+}
+
+.researchTitles {
+}
+
+.researchSemiTitle {
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  letter-spacing: 0.2px;
+  color: #737373;
+  font-family: "Montserrat Regular", sans-serif;
+}
+
+.researchBigTitle {
+  font-weight: 700;
+  font-size: 49px;
+  line-height: 58px;
+  letter-spacing: 0.2px;
+  color: #252b42;
+  font-family: "oswald Regular", sans-serif;
+}
+
+.researchText {
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 26px;
+  letter-spacing: 0.2px;
+  color: #737373;
+  font-family: "Raleway Regular", sans-serif;
+}
+
+.researchButtonBanner {
+  display: flex;
+  font-family: "Raleway Regular", sans-serif;
+}
+
+.researchFillButton {
+  padding: 15px 40px;
+  gap: 10px;
+  background: #23856d;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.researchOutlineButton {
+  padding: 15px 40px;
+  gap: 10px;
+  border: 1px solid #23856d;
+  border-radius: 5px;
+  background: none;
+  margin-left: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+/*hover*/
+.researchFillButton:hover {
+  background: #0db188;
+  color: #fff;
+}
+
+.researchOutlineButton:hover {
+  background: #23856d;
+  color: #fff;
+}
+
+/*responsive*/
+
+@media screen and (width > 991px) {
+  .researchText {
+    max-width: 351px;
+  }
+}
+
+@media screen and (width < 992px) {
+  .researchImg {
+    display: none;
+  }
+  .researchButtonBanner {
+    flex-direction: column;
+  }
+  .researchOutlineButton {
+    margin-left: 0;
+  }
+  .breakResearch {
+    display: none;
+  }
+}

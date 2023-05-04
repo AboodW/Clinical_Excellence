@@ -1,12 +1,13 @@
 import "./Header.css";
 import { headerTexts } from "../../constants/header";
-// import NavBar from "./Navbar/NavBar";
+import NavBar from "./Navbar/Navbar";
 import Overlay from "./../common/Overlay/Overlay";
 const Header = () => {
   return (
-    <header className="container-fluid headerLayout">
+    //todo i must add a div and a nav bar
+    <header className="container-fluid headerLayout position-relative">
       <Overlay />
-      {/* <NavBar /> */}
+      <NavBar />
       <div className="container headerBody p-0 d-flex align-items-center justify-content-center">
         <div className="container my-auto p-0">
           <div className="headerBigTitle">{headerTexts[0].Bigtitle}</div>

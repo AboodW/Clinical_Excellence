@@ -1,0 +1,20 @@
+.productTitles {
+}
+.productSemiTitle {
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #737373;
+  font-family: "Montserrat Regular", sans-serif;
+}
+.productTitle {
+  font-weight: 500;
+  font-size: 1.625rem;
+  line-height: 1.875rem;
+  text-align: center;
+  letter-spacing: 0.1px;
+  color: #252b42;
+  font-family: "oswald Regular", sans-serif;
+}
