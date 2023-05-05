@@ -1,0 +1,44 @@
+.productCard {
+  background: #f5f8fd;
+  margin-top: 36px;
+}
+
+.productColumn a {
+  text-decoration: none;
+}
+
+.productCardTitle {
+}
+
+.productCard {
+  padding: 48px 20.5px 19px 20.5px;
+}
+
+.productBigTitle {
+  font-weight: 300;
+  font-size: 1.0625rem;
+  line-height: 1.5rem;
+
+  letter-spacing: 0.2px;
+  color: #252b42;
+  font-family: "Raleway Regular", sans-serif;
+}
+.productSmallTitle {
+  font-weight: 300;
+  font-size: 1.0625rem;
+  line-height: 1.5rem;
+
+  letter-spacing: 0.2px;
+  color: #737373;
+  font-family: "Raleway Regular", sans-serif;
+}
+
+.productPrice {
+  font-weight: 900;
+  font-size: 1.0625rem;
+  line-height: 1.5rem;
+
+  letter-spacing: 0.2px;
+  color: #2dc071;
+  font-family: "Raleway Regular", sans-serif;
+}
