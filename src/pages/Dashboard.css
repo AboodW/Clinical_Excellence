@@ -1,0 +1,62 @@
+.dashboardBigContainer {
+  background: linear-gradient(45deg, #d929f0, #2020c2);
+}
+
+.dashboardContainer {
+}
+
+.dashboardImageWidth {
+  height: 20%;
+  width: 20%;
+}
+table thead {
+  background-color: #2dc071;
+  color: #fff;
+  text-align: center;
+}
+
+table tbody {
+  background-color: #fff;
+  color: #000;
+}
+
+td {
+  /* text-align: center; */
+}
+td div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.dashboardUpdate {
+  background-color: #0570eb;
+  color: #fff;
+  border: none;
+  padding: 0.2rem 0.8rem 0.6rem 0.8rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 0.8rem;
+  text-decoration: none;
+}
+
+.dashboardDelete {
+  background-color: #f30b0b;
+  color: #fff;
+  border: none;
+  padding: 0.2rem 0.8rem 0.6rem 0.8rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 0.8rem;
+  text-decoration: none;
+}
+
+.tr {
+  background-color: #f30b0b;
+}
