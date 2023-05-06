@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { createContext, useContext, useState } from "react";
@@ -94,28 +95,24 @@ export const StateContext = ({ children }) => {
     });
   };
 
-  return (
-    <Context.Provider
-      value={{
-        showCart,
-        setShowCart,
-        cartItems,
-        totalPrice,
-        totalQuantities,
-        qty,
-        incQty,
-        decQty,
-        onAdd,
-        toggleCartItemQuanitity,
-        onRemove,
-        setCartItems,
-        setTotalPrice,
-        setTotalQuantities,
-      }}
-    >
-      {children}
-    </Context.Provider>
-  );
+  const state = {
+    showCart,
+    setShowCart,
+    cartItems,
+    totalPrice,
+    totalQuantities,
+    qty,
+    incQty,
+    decQty,
+    onAdd,
+    toggleCartItemQuanitity,
+    onRemove,
+    setCartItems,
+    setTotalPrice,
+    setTotalQuantities,
+  };
+
+  return <Context.Provider value={state}>{children}</Context.Provider>;
 };
 
 export const useStateContext = () => useContext(Context);

@@ -6,6 +6,8 @@ import LatestNews from "./Latest News/LatestNews";
 import Products from "./Products/Products";
 import Research from "./Research/Research";
 import Reviews from "./Reviews/Reviews";
+import ProductDetails from "./ProductDetails/ProductDetails";
+import Cart from "./Cart/Cart";
 
 export {
   About,
@@ -16,4 +18,6 @@ export {
   Products,
   Research,
   Reviews,
+  ProductDetails,
+  Cart,
 };

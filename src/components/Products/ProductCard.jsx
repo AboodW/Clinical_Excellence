@@ -1,13 +1,21 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import "./ProductCard.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { urlFor } from "../../lib/client";
 
 const ProductCard = ({ product: { image, name, slug, price, details } }) => {
+  const navigate = useNavigate();
+
+  const refreshThePage = () => {
+    navigate(`/product/${slug.current}`);
+    window.location.reload();
+  };
+
   return (
     <div className="col-md-3 productColumn">
-      <Link to="/">
+      {/* to={`/product/${product.slug}`} */}
+      <Link to={`/product/${slug.current}`} onClick={refreshThePage}>
         <div className="card productCard border-0">
           <div className="productCardTitle">
             <p className="productBigTitle">{name}</p>

@@ -42,3 +42,21 @@
   color: #2dc071;
   font-family: "Raleway Regular", sans-serif;
 }
+
+/*styling button witch have a link inside it*/
+
+.Return-To-Home {
+  text-decoration: none;
+  color: #fff;
+  background-color: #2dc071;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 1.0625rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.2px;
+  font-family: "Raleway Regular", sans-serif;
+  font-weight: 900;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}

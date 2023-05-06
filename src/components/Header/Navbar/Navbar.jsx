@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-vars */
 import "./Navbar.css";
-// import { Link } from "react-router-dom";
+import Cart from "../../Cart/Cart";
+import { Link } from "react-router-dom";
+import { useStateContext } from "../../../context/StateContext";
 import { navbarTexts } from "../../../constants/header";
 import { BiMenuAltRight } from "react-icons/bi";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
@@ -9,6 +11,7 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 
 const Navbar = () => {
+  const { showCart, setShowCart, totalQuantities } = useStateContext();
   return (
     <div className="navBanner">
       <nav className="navbar navbar-expand-lg p-0 flex-nowrap">
@@ -104,10 +107,10 @@ const Navbar = () => {
             <div className="loginBanner">
               <ul className="navbar-nav flex-row ">
                 <li className="nav-item ">
-                  <a to="*" className="nav-link login">
+                  <Link to="/dashboard" className="nav-link login">
                     <PersonOutlinedIcon />
                     {navbarTexts[2]?.login}
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item ">
                   <a to="*" className="nav-link">
@@ -115,9 +118,16 @@ const Navbar = () => {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a to="*" className="nav-link">
+                  <button
+                    type="button"
+                    className="cart-icon"
+                    onClick={() => setShowCart(true)}
+                  >
                     <ShoppingCartOutlinedIcon />
-                  </a>
+                    <span className="cart-item-qty">{totalQuantities}</span>
+                  </button>
+
+                  {showCart && <Cart />}
                 </li>
                 <li className="nav-item">
                   <a to="*" className="nav-link favi">
