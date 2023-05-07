@@ -120,7 +120,7 @@ const Navbar = () => {
                 <li className="nav-item">
                   <button
                     type="button"
-                    className="cart-icon"
+                    className="cart-icon text-black"
                     onClick={() => setShowCart(true)}
                   >
                     <ShoppingCartOutlinedIcon />

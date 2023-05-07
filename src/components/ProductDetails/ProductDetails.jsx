@@ -19,7 +19,7 @@ const ProductDetails = () => {
   // console.log(slug);
   const [product, setProduct] = useState([]);
   const [products, setProducts] = useState([]);
-  const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
+  const { decQty, incQty, qty, onAdd, setQty, setShowCart } = useStateContext();
   const { image, name, details, price } = product;
   // console.log(product.image);
   // console.log(products);
@@ -57,7 +57,7 @@ const ProductDetails = () => {
     fetchStaticPaths();
     fetchProductsData();
     fetchProductData();
-  }, []);
+  }, [slug]);
 
   return (
     <div>

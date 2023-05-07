@@ -7,15 +7,16 @@ import { urlFor } from "../../lib/client";
 const ProductCard = ({ product: { image, name, slug, price, details } }) => {
   const navigate = useNavigate();
 
-  const refreshThePage = () => {
-    navigate(`/product/${slug.current}`);
-    window.location.reload();
-  };
+  // const refreshThePage = () => {
+  //   navigate(`/product/${slug.current}`);
+  //   window.location.reload();
+  // };
 
   return (
     <div className="col-md-3 productColumn">
       {/* to={`/product/${product.slug}`} */}
-      <Link to={`/product/${slug.current}`} onClick={refreshThePage}>
+      {/* onClick={refreshThePage} */}
+      <Link to={`/product/${slug.current}`}>
         <div className="card productCard border-0">
           <div className="productCardTitle">
             <p className="productBigTitle">{name}</p>

@@ -8,6 +8,8 @@ import Research from "./Research/Research";
 import Reviews from "./Reviews/Reviews";
 import ProductDetails from "./ProductDetails/ProductDetails";
 import Cart from "./Cart/Cart";
+import AddNewProduct from "./Dashboard Modals/AddNewProduct";
+import UpdateModal from "./Dashboard Modals/UpdateModal";
 
 export {
   About,
@@ -20,4 +22,6 @@ export {
   Reviews,
   ProductDetails,
   Cart,
+  AddNewProduct,
+  UpdateModal,
 };
