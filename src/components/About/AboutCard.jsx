@@ -9,12 +9,12 @@ const AboutCard = (props) => {
         <div className="card-body p-0 aboutBody">
           <span className="cardCircle">{num}</span>
 
-          <p className="card-text aboutCardText1">{text}</p>
+          <p className="card-text aboutCardText1 w-50">{text}</p>
 
           <div className="horeLine"></div>
 
-          <div className="twoLines">
-            <p className="card-text aboutCardText2">{text2}</p>
+          <div className="twoLines d-flex">
+            <p className="card-text aboutCardText2 ">{text2}</p>
           </div>
         </div>
       </div>

@@ -2,11 +2,15 @@ import "./Research.css";
 import { researchTexts } from "../../constants/research";
 const Research = () => {
   return (
-    <div className="container d-flex justify-content-between align-items-center">
+    <div className="researchBigContainer container d-flex justify-content-between align-items-center">
       <div className="researchTextBody d-flex flex-column">
-        <div className="researchTitles">
-          <p className="researchSemiTitle">{researchTexts.semiTitle}</p>
-          <p className="researchBigTitle">{researchTexts.title}</p>
+        <div className="researchTitles d-flex">
+          <div>
+            <p className="researchSemiTitle">{researchTexts.semiTitle}</p>
+          </div>
+          <div>
+            <p className="researchBigTitle">{researchTexts.title}</p>
+          </div>
         </div>
 
         <p className="researchText">

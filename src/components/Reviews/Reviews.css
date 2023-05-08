@@ -91,7 +91,7 @@
   border-bottom-right-radius: 0;
 }
 
-.subscribeButton {
+.reviewUniqueSubscribeButton {
   background: #23a6f0;
   border: 1px solid #e6e6e6;
   border-radius: 0px 5px 5px 0px;
@@ -106,4 +106,39 @@
   text-align: center;
   letter-spacing: 0.2px;
   color: #737373;
+}
+
+/*responsive less than 786px flex column*/
+
+@media (max-width: 786px) {
+  .reviewsContainer {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .ratingContainer {
+    width: 100%;
+  }
+  .verticalDivider {
+    width: 100%;
+    height: 0;
+    border: 2px solid #ececec;
+    text-align: center;
+    transform: rotate(0deg);
+  }
+  .subscribeContainer {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .subscribeInput {
+    width: 100%;
+  }
+  .subscribeInput input {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  .subscribeButton {
+    border-radius: 5px;
+  }
 }

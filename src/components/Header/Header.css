@@ -100,11 +100,15 @@ header {
     gap: 1rem;
     max-width: 100%;
     margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
   }
   .getQuoteButton {
-    width: 100%;
+    width: 50%;
+    font-size: 0.8rem;
   }
   .learnMoreButton {
-    width: 100%;
+    width: 50%;
+    font-size: 0.8rem;
   }
 }

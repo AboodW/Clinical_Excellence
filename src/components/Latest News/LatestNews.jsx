@@ -9,7 +9,7 @@ import LatestNewsCard from "./LatestNewsCard";
 const LatestNews = () => {
   return (
     <div className="container d-flex flex-column justify-content-between">
-      <div className="latestNewsTextBody">
+      <div className="latestNewsTextBody d-flex flex-column">
         <div className="latestNewsTitle">
           <p>{latestNewsHeaderTexts.header}</p>
         </div>

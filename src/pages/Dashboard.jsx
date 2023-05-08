@@ -301,7 +301,7 @@ const Dashboard = () => {
                     className="form-control"
                     id="name"
                     placeholder={pProduct.name}
-                    // value={pProduct.name}
+                    value={pProduct.name}
                     onChange={(e) => {
                       setPProduct({ ...pProduct, name: e.target.value });
                     }}
@@ -320,7 +320,7 @@ const Dashboard = () => {
                     onChange={(e) => {
                       setPProduct({ ...pProduct, details: e.target.value });
                     }}
-                    // value={pProduct.details}
+                    value={pProduct.details}
                   >
                     {pProduct.details}
                   </textarea>
@@ -335,6 +335,7 @@ const Dashboard = () => {
                     className="form-control"
                     id="price"
                     placeholder={`$${pProduct.price}`}
+                    value={pProduct.price.slice(0)}
                     onChange={(e) => {
                       setPProduct({ ...pProduct, price: e.target.value });
                     }}

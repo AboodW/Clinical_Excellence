@@ -27,3 +27,31 @@
   letter-spacing: 0.2px;
   color: #737373;
 }
+
+/*responsive less than 786px*/
+
+@media (max-width: 786px) {
+  .latestNewsTitle {
+    font-weight: 700;
+    font-size: 3.0625rem;
+    line-height: 58px;
+
+    text-align: center;
+    letter-spacing: 0.2px;
+
+    color: #252b42;
+  }
+  .latestNewsText {
+    font-weight: 300;
+    font-size: 1.125rem;
+    line-height: 26px;
+
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: #737373;
+  }
+  .latestNewsTextBody {
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -9,9 +9,9 @@ const Footer = () => {
     <div className="footerContainer container-fluid d-flex flex-column justify-content-around align-items-center">
       <div className="rowBanner w-100">
         <div className="row w-100">
-          <div className="d-flex justify-content-around">
-            <div className="colo-md-4">
-              <div className="co1 d-flex flex-column justify-content-between">
+          <div className="footerRowColumns d-flex justify-content-around">
+            <div className="col-md-4">
+              <div className="co1 d-flex flex-column justify-content-between align-items-center">
                 <h6 className="footerHeaderOption">Get In Touch</h6>
                 <p className="footerOption footerOPText">
                   the quick fox jumps over the lazy dog
@@ -23,8 +23,8 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="colo-md-4">
-              <div className="co1 d-flex flex-column justify-content-between">
+            <div className="col-md-4">
+              <div className="co2 d-flex flex-column justify-content-between">
                 <h6 className="footerHeaderOption">Company info</h6>
                 <p className="footerOption">About Us</p>
                 <p className="footerOption">Carrier</p>
@@ -32,8 +32,8 @@ const Footer = () => {
                 <p className="footerOption">Blog</p>
               </div>
             </div>
-            <div className="colo-md-4">
-              <div className="co1 d-flex flex-column justify-content-between">
+            <div className="col-md-4">
+              <div className="co3 d-flex flex-column justify-content-between">
                 <h6 className="footerHeaderOption">Features</h6>
                 <p className="footerOption">Business Marketing</p>
                 <p className="footerOption">User Analytic</p>

@@ -39,7 +39,10 @@ const Reviews = () => {
             placeholder={subscribeTexts?.placeholder}
             className="form-control"
           />
-          <button type="button" className="btn subscribeButton">
+          <button
+            type="button"
+            className="btn mt-0 reviewUniqueSubscribeButton"
+          >
             {subscribeTexts?.buttonText}
           </button>
         </div>

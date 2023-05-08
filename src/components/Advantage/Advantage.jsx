@@ -9,8 +9,8 @@ import AdvantageCard from "./AdvantageCard";
 
 const Advantage = () => {
   return (
-    <div className="container d-flex flex-column justify-content-between">
-      <div className="AdvantageTextBody">
+    <div className="advantageBigContainer mt-5 container d-flex flex-column justify-content-between">
+      <div className="AdvantageTextBody d-flex flex-column">
         <div className="AdvantageSemiTitle">
           <p>{advantageHeaderTexts.semiTitle}</p>
         </div>

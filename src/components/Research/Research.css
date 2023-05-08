@@ -1,7 +1,12 @@
 .researchTextBody {
 }
 
+.researchBigContainer {
+  margin-top: 50px;
+}
+
 .researchTitles {
+  flex-direction: column;
 }
 
 .researchSemiTitle {
@@ -76,9 +81,6 @@
 }
 
 @media screen and (width < 992px) {
-  .researchImg {
-    display: none;
-  }
   .researchButtonBanner {
     flex-direction: column;
   }
@@ -87,5 +89,71 @@
   }
   .breakResearch {
     display: none;
+  }
+}
+
+/*responsive all less than 786 px*/
+
+@media screen and (width < 786px) {
+  .researchButtonBanner {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .researchTitles {
+    flex-direction: column-reverse;
+  }
+
+  .researchSemiTitle {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: #737373;
+  }
+  .researchBigTitle {
+    font-weight: 700;
+    font-size: 3.1rem;
+    line-height: 58px;
+    letter-spacing: 0.2px;
+    text-align: center;
+
+    /* text-color */
+
+    color: #252b42;
+  }
+  .researchText {
+    font-size: 1rem;
+    line-height: 22px;
+    text-align: center;
+  }
+  .researchSemiTitle {
+    font-size: 1rem;
+    line-height: 22px;
+  }
+  .researchButtonBanner {
+    flex-direction: column;
+  }
+  .researchFillButton {
+    width: 50%;
+  }
+  .researchOutlineButton {
+    margin-left: 0;
+    width: 50%;
+    margin-top: 10px;
+  }
+  .breakResearch {
+    display: none;
+  }
+  .researchBigContainer {
+    flex-direction: column;
+  }
+  .researchImg {
+    margin-top: 50px;
+  }
+  .researchImg img {
+    width: 374.5px;
+    height: 366px;
   }
 }

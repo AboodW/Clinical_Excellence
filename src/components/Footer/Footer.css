@@ -6,6 +6,9 @@
 .rowBanner {
   padding: 80px 0;
 }
+.footerRowColumns div {
+  text-align: center;
+}
 .footerHeaderOption {
   font-weight: 500;
   font-size: 1.625rem;
@@ -29,4 +32,21 @@
   letter-spacing: 0.2px;
   color: #8ec2f2;
   font-family: "Raleway Regular", sans-serif;
+}
+
+@media screen and (width <786px) {
+  .footerRowColumns {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footerRowColumns div {
+    margin-bottom: 20px;
+  }
+  .co1 {
+    text-align: center;
+  }
+  .socialIcons {
+    margin: auto auto;
+  }
 }

@@ -4,6 +4,9 @@ import { productsTitles } from "../../constants/products";
 import { client } from "../../lib/client";
 import { useState, useEffect } from "react";
 import ProductCard from "./ProductCard";
+// import OwlCarousel from "react-owl-carousel";
+// import "owl.carousel/dist/assets/owl.carousel.css";
+// import "owl.carousel/dist/assets/owl.theme.default.css";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -38,4 +41,23 @@ const Products = () => {
   );
 };
 
+{
+  /* <OwlCarousel
+  key={product._id}
+  className="owl-theme"
+  loop
+  autoplay
+  margin={10}
+  nav
+> */
+}
+{
+  /* <div className="item"> */
+}
+{
+  /* </div> */
+}
+{
+  /* </OwlCarousel> */
+}
 export default Products;
