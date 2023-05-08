@@ -4,6 +4,7 @@ import "./Dashboard.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { BsPencilSquare } from "react-icons/bs";
+import { MdOutlineMedicalServices } from "react-icons/md";
 import { AiFillDelete } from "react-icons/ai";
 import { client, urlFor } from "../lib/client";
 import { UpdateModal, AddNewProduct } from "../components";
@@ -19,6 +20,48 @@ const Dashboard = () => {
     slug: "",
   });
   const [storeId, setStoreId] = useState("");
+
+  const handleAddProductSubmit = async (e) => {
+    e.preventDefault();
+    //form data
+    const formData = new FormData(e.target);
+    const newProduct = {
+      name: formData.get("AddName"),
+      details: formData.get("AddDetails"),
+      price: formData.get("AddPrice"),
+      slug: formData.get("AddSlug"),
+    };
+    if (formData.get("AddImage")) {
+      const file = formData.get("AddImage");
+
+      const asset = await client.assets.upload("image", file);
+      // replace with actual dimensions;
+      console.log(asset._id);
+      newProduct.image = {
+        _type: "image",
+        asset: {
+          _ref: asset._id,
+          _type: "reference",
+        },
+      };
+    }
+    //add product to db
+    client
+      .create({ _type: "product", ...newProduct })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+
+    //add product to state
+    setProducts([...products, newProduct]);
+    //reset form
+    e.target.reset();
+  };
+
+  // console.log(newProduct);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -96,31 +139,6 @@ const Dashboard = () => {
 
   console.log(pProduct);
 
-  const handleProductUpdate = async () => {
-    // const { name, details, price, image } = e.target.elements;
-    // const product = {
-    //   name: name.value,
-    //   details: details.value,
-    //   price: price.value,
-    //   image: image.value,
-    // };
-    // try {
-    //   // Make API call to update product
-    //   await client.update(product);
-    //   // Update products array
-    //   const updatedProducts = products.map((product) => {
-    //     if (product._id === storeId) {
-    //       return product;
-    //     }
-    //     return product;
-    //   });
-    //   setProducts(updatedProducts);
-    //   // Close modal
-    // } catch (error) {
-    //   console.error(error);
-    // }
-  };
-
   const handleDeleteUpdate = async (id) => {
     const confirmDelete = window.confirm(
       "Are you sure you want to delete this product?"
@@ -157,7 +175,14 @@ const Dashboard = () => {
         <button>
           <Link to="/">Home</Link>
         </button>
-        <button>Add New Product</button>
+        <button
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#AddProduct"
+          className="dashboardUpdate"
+        >
+          Add New Product
+        </button>
         <div className="mt-5 table-responsive-md">
           <table className="table table-bordered">
             <thead>
@@ -315,7 +340,7 @@ const Dashboard = () => {
                     }}
                   />
                 </div>
-                <div className="modal-footer">
+                <div className="modal-footer d-flex justify-content-center align-items-center">
                   <button type="submit" className="btn btn-primary">
                     Save changes
                   </button>
@@ -348,14 +373,14 @@ const Dashboard = () => {
             </div>
             <div className="modal-body">
               {/* Update Modal Form */}
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleAddProductSubmit}>
                 <div className="mb-3">
                   <label htmlFor="image" className="form-label">
                     Image
                   </label>
                   <input
                     type="file"
-                    name="image"
+                    name="AddImage"
                     className="form-control"
                     id="image"
                     placeholder={"Change Image"}
@@ -363,6 +388,7 @@ const Dashboard = () => {
                     onChange={(e) =>
                       setPProduct({ ...pProduct, image: e.target.files[0] })
                     }
+                    required
                   />
                 </div>
                 <div className="mb-3">
@@ -371,13 +397,31 @@ const Dashboard = () => {
                   </label>
                   <input
                     type="text"
-                    name="name"
+                    name="AddName"
                     className="form-control"
                     id="name"
-                    placeholder={pProduct.name}
                     onChange={(e) => {
                       setPProduct({ ...pProduct, name: e.target.value });
                     }}
+                    required
+                  />
+                </div>
+
+                {/*slug */}
+
+                <div className="mb-3">
+                  <label htmlFor="slug" className="form-label">
+                    Slug
+                  </label>
+                  <input
+                    type="text"
+                    name="AddSlug"
+                    className="form-control"
+                    id="slug"
+                    onChange={(e) => {
+                      setPProduct({ ...pProduct, slug: e.target.value });
+                    }}
+                    required
                   />
                 </div>
                 <div className="mb-3">
@@ -386,13 +430,13 @@ const Dashboard = () => {
                   </label>
 
                   <textarea
-                    name="details"
+                    name="AddDetails"
                     className="form-control"
                     id="details"
-                    placeholder={pProduct.details}
                     onChange={(e) => {
                       setPProduct({ ...pProduct, details: e.target.value });
                     }}
+                    required
                   ></textarea>
                 </div>
                 <div className="mb-3">
@@ -400,20 +444,19 @@ const Dashboard = () => {
                     Price
                   </label>
                   <input
-                    type="number"
-                    name="price"
+                    type="text"
+                    name="AddPrice"
                     className="form-control"
                     id="price"
-                    placeholder={pProduct.price}
-                    value={pProduct.price}
                     onChange={(e) => {
                       setPProduct({ ...pProduct, price: e.target.value });
                     }}
+                    required
                   />
                 </div>
-                <div className="modal-footer">
+                <div className="modal-footer d-flex justify-content-center align-items-center">
                   <button type="submit" className="btn btn-primary">
-                    Save changes
+                    Add New Product
                   </button>
                 </div>
               </form>
