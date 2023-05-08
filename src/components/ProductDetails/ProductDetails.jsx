@@ -67,7 +67,7 @@ const ProductDetails = () => {
           <div className="image-container">
             {image && (
               <img
-                src={urlFor(image[0])}
+                src={urlFor(image).url()}
                 className="product-detail-image"
                 alt={name}
               />

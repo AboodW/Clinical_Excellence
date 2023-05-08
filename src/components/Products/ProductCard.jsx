@@ -23,7 +23,7 @@ const ProductCard = ({ product: { image, name, slug, price, details } }) => {
             <p className="productSmallTitle">{details}</p>
           </div>
 
-          <img src={urlFor(image && image[0])} alt={name} />
+          {image && <img src={urlFor(image).url()} alt={name} />}
 
           <div className="productCardPrice">
             <p className="productPrice">${price}</p>

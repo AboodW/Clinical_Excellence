@@ -10,7 +10,6 @@ import { UpdateModal, AddNewProduct } from "../components";
 
 const Dashboard = () => {
   const [products, setProducts] = useState([]);
-  const [isAddModalOpen, setIsAddModalOpen] = useState(false);
   //states for fields
   const [pProduct, setPProduct] = useState({
     name: "",
@@ -19,20 +18,65 @@ const Dashboard = () => {
     image: "",
     slug: "",
   });
-  let storeId;
-  // console.log(products);
+  const [storeId, setStoreId] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const formData = new FormData(e.target);
+    const newProduct = {
+      name: formData.get("name"),
+      details: formData.get("details"),
+      price: formData.get("price"),
+    };
+
+    if (formData.get("image")) {
+      const file = formData.get("image");
+
+      const asset = await client.assets.upload("image", file);
+      // replace with actual dimensions;
+      console.log(asset._id);
+      newProduct.image = {
+        _type: "image",
+        asset: {
+          _ref: asset._id,
+          _type: "reference",
+        },
+      };
+    }
+
+    client
+      .patch(storeId)
+      .set(newProduct)
+      .commit()
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+
+    const updatedProducts = products.map((product) => {
+      if (product._id === storeId) {
+        return {
+          ...product,
+          name: newProduct.name,
+          details: newProduct.details,
+          price: newProduct.price,
+          image: newProduct.image,
+        };
+      } else {
+        return product;
+      }
+    });
+
+    setProducts(updatedProducts);
   };
 
   const storeIdFunc = (id) => {
-    storeId = id;
-    // console.log(storeId);
-
+    setStoreId(id);
+    console.log(storeId);
     products.map((product) => {
       if (product._id === storeId) {
-        // console.log(product);
         setPProduct({
           name: product.name,
           details: product.details,
@@ -113,6 +157,7 @@ const Dashboard = () => {
         <button>
           <Link to="/">Home</Link>
         </button>
+        <button>Add New Product</button>
         <div className="mt-5 table-responsive-md">
           <table className="table table-bordered">
             <thead>
@@ -135,7 +180,7 @@ const Dashboard = () => {
                       <div className="mt-3">
                         {product.image && (
                           <img
-                            src={urlFor(product.image[0])}
+                            src={urlFor(product.image).url()}
                             className="dashboardImageWidth"
                             alt={product.name}
                           />
@@ -161,6 +206,7 @@ const Dashboard = () => {
                           className="dashboardUpdate"
                           onClick={() => storeIdFunc(product._id)}
                         >
+                          {/* {console.log(storeId)} */}
                           <BsPencilSquare />
                         </button>
                       </div>
@@ -214,6 +260,10 @@ const Dashboard = () => {
                     className="form-control"
                     id="image"
                     placeholder={"Change Image"}
+                    accept="image/*"
+                    onChange={(e) =>
+                      setPProduct({ ...pProduct, image: e.target.files[0] })
+                    }
                   />
                 </div>
                 <div className="mb-3">
@@ -226,6 +276,10 @@ const Dashboard = () => {
                     className="form-control"
                     id="name"
                     placeholder={pProduct.name}
+                    // value={pProduct.name}
+                    onChange={(e) => {
+                      setPProduct({ ...pProduct, name: e.target.value });
+                    }}
                   />
                 </div>
                 <div className="mb-3">
@@ -238,7 +292,13 @@ const Dashboard = () => {
                     className="form-control"
                     id="details"
                     placeholder={pProduct.details}
-                  ></textarea>
+                    onChange={(e) => {
+                      setPProduct({ ...pProduct, details: e.target.value });
+                    }}
+                    // value={pProduct.details}
+                  >
+                    {pProduct.details}
+                  </textarea>
                 </div>
                 <div className="mb-3">
                   <label htmlFor="price" className="form-label">
@@ -250,14 +310,113 @@ const Dashboard = () => {
                     className="form-control"
                     id="price"
                     placeholder={`$${pProduct.price}`}
+                    onChange={(e) => {
+                      setPProduct({ ...pProduct, price: e.target.value });
+                    }}
                   />
+                </div>
+                <div className="modal-footer">
+                  <button type="submit" className="btn btn-primary">
+                    Save changes
+                  </button>
                 </div>
               </form>
             </div>
-            <div className="modal-footer">
-              <button type="submit" className="btn btn-primary">
-                Save changes
-              </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        className="modal fade"
+        id="AddProduct"
+        tabIndex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h1 className="modal-title fs-5" id="exampleModalLabel">
+                Updating Product
+              </h1>
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body">
+              {/* Update Modal Form */}
+              <form onSubmit={handleSubmit}>
+                <div className="mb-3">
+                  <label htmlFor="image" className="form-label">
+                    Image
+                  </label>
+                  <input
+                    type="file"
+                    name="image"
+                    className="form-control"
+                    id="image"
+                    placeholder={"Change Image"}
+                    accept="image/*"
+                    onChange={(e) =>
+                      setPProduct({ ...pProduct, image: e.target.files[0] })
+                    }
+                  />
+                </div>
+                <div className="mb-3">
+                  <label htmlFor="name" className="form-label">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    className="form-control"
+                    id="name"
+                    placeholder={pProduct.name}
+                    onChange={(e) => {
+                      setPProduct({ ...pProduct, name: e.target.value });
+                    }}
+                  />
+                </div>
+                <div className="mb-3">
+                  <label htmlFor="details" className="form-label">
+                    Details
+                  </label>
+
+                  <textarea
+                    name="details"
+                    className="form-control"
+                    id="details"
+                    placeholder={pProduct.details}
+                    onChange={(e) => {
+                      setPProduct({ ...pProduct, details: e.target.value });
+                    }}
+                  ></textarea>
+                </div>
+                <div className="mb-3">
+                  <label htmlFor="price" className="form-label">
+                    Price
+                  </label>
+                  <input
+                    type="number"
+                    name="price"
+                    className="form-control"
+                    id="price"
+                    placeholder={pProduct.price}
+                    value={pProduct.price}
+                    onChange={(e) => {
+                      setPProduct({ ...pProduct, price: e.target.value });
+                    }}
+                  />
+                </div>
+                <div className="modal-footer">
+                  <button type="submit" className="btn btn-primary">
+                    Save changes
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
