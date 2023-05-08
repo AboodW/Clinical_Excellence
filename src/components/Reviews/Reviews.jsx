@@ -41,7 +41,7 @@ const Reviews = () => {
           />
           <button
             type="button"
-            className="btn mt-0 reviewUniqueSubscribeButton"
+            className="px-3 mt-0 reviewUniqueSubscribeButton"
           >
             {subscribeTexts?.buttonText}
           </button>

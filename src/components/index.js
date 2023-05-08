@@ -10,6 +10,7 @@ import ProductDetails from "./ProductDetails/ProductDetails";
 import Cart from "./Cart/Cart";
 import AddNewProduct from "./Dashboard Modals/AddNewProduct";
 import UpdateModal from "./Dashboard Modals/UpdateModal";
+import Navbar from "./Header/Navbar/Navbar";
 
 export {
   About,
@@ -24,4 +25,5 @@ export {
   Cart,
   AddNewProduct,
   UpdateModal,
+  Navbar,
 };

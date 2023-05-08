@@ -1,5 +1,6 @@
 .navBanner {
   font-family: "Montserrat Regular", sans-serif;
+  background-color: rgb(9, 156, 201);
 }
 
 .allNavsLinks {
@@ -12,6 +13,7 @@
 .nav-link {
   /* color: #fff; */
   font-family: "Montserrat Regular", sans-serif;
+  color: #fff;
 }
 
 @media screen and (width < 1253px) {
@@ -26,6 +28,9 @@
   .login,
   .favi {
     display: none;
+  }
+  .allNavsLinks {
+    width: 100%;
   }
 }
 

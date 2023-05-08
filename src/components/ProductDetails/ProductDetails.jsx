@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import Navbar from "../Header/Navbar/Navbar";
+
 import {
   AiOutlineMinus,
   AiOutlinePlus,
@@ -61,7 +61,6 @@ const ProductDetails = () => {
 
   return (
     <div>
-      <Navbar />
       <div className="product-detail-container">
         <div>
           <div className="image-container">

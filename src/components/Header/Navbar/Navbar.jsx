@@ -19,90 +19,92 @@ const Navbar = () => {
           <a className="navbar-brand" href="/">
             <img src={navbarTexts[0].logo} alt="logo img" />
           </a>
-          <div className="allNavsLinks d-flex ">
-            <button
-              className="navbar-toggler border-0 my-auto"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNavDropdown"
-              aria-controls="navbarNavDropdown"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="spanMenu">
-                <BiMenuAltRight />
-              </span>
-            </button>
+          <div className="allNavsLinks d-flex justify-content-between ">
+            <div className="d-flex flex-column justify-content-center align-items-center">
+              <button
+                className="navbar-toggler border-0 my-auto"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span className="spanMenu">
+                  <BiMenuAltRight />
+                </span>
+              </button>
 
-            <div className="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul className="navbar-nav">
-                <li className="nav-item">
-                  <a className="nav-link" aria-current="page" href="/">
-                    Home
-                  </a>
-                </li>
-                <li className="nav-item dropdown">
-                  <a
-                    className="nav-link dropdown-toggle"
-                    href="*"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Shop
-                  </a>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <a className="dropdown-item" href="*">
-                        Drugs
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="*">
-                        Medical Products
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="*">
-                        Get Help
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="*">
-                    About
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="*">
-                    Blog
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="*">
-                    Contact
-                  </a>
-                </li>
-                <li className="nav-item dropdown">
-                  <a
-                    className="nav-link dropdown-toggle"
-                    href="*"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    pages
-                  </a>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <a className="dropdown-item" href="*">
-                        Dashboard
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+              <div className="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul className="navbar-nav">
+                  <li className="nav-item">
+                    <a className="nav-link" aria-current="page" href="/">
+                      Home
+                    </a>
+                  </li>
+                  <li className="nav-item dropdown">
+                    <a
+                      className="nav-link dropdown-toggle"
+                      href="*"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Shop
+                    </a>
+                    <ul className="dropdown-menu">
+                      <li>
+                        <a className="dropdown-item" href="*">
+                          Drugs
+                        </a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item" href="*">
+                          Medical Products
+                        </a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item" href="*">
+                          Get Help
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="*">
+                      About
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="*">
+                      Blog
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="*">
+                      Contact
+                    </a>
+                  </li>
+                  <li className="nav-item dropdown">
+                    <a
+                      className="nav-link dropdown-toggle"
+                      href="*"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      pages
+                    </a>
+                    <ul className="dropdown-menu">
+                      <li>
+                        <a className="dropdown-item" href="*">
+                          Dashboard
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div className="loginBanner">
               <ul className="navbar-nav flex-row ">
@@ -120,7 +122,7 @@ const Navbar = () => {
                 <li className="nav-item">
                   <button
                     type="button"
-                    className="cart-icon text-black"
+                    className="cart-icon"
                     onClick={() => setShowCart(true)}
                   >
                     <ShoppingCartOutlinedIcon />
